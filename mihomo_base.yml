@@ -1,7 +1,5 @@
 ipv6: true
-allow-lan: true
 mixed-port: 7890
-external-controller: 127.0.0.1:9090
 
 profile:
   store-selected: true
@@ -14,17 +12,11 @@ dns:
   fake-ip-filter:
     - "+.lan"
     - "+.local"
-    - "localhost.ptlogin2.qq.com"
   default-nameserver:
     - tls://223.5.5.5:853
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  fallback:
-    - https://1.1.1.1/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
 
 proxies: ~
 proxy-groups: ~
