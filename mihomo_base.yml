@@ -7,16 +7,6 @@ external-controller: 127.0.0.1:9090
 external-ui: ui
 external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
 
-# Geo 数据:lite 版本 + ASN + 自动更新
-geodata-mode: true
-geo-auto-update: true
-geo-update-interval: 24
-geox-url:
-  geoip: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
-  geosite: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-  asn: "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/GeoLite2-ASN.mmdb"
-
 find-process-mode: strict
 global-client-fingerprint: chrome
 
@@ -53,34 +43,16 @@ dns:
   ipv6: true
   enhanced-mode: fake-ip
   fake-ip-filter:
+    - "*"
     - "+.lan"
     - "+.local"
-    - "localhost.ptlogin2.qq.com"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
     - "+.market.xiaomi.com"
-    - "+.srv.nintendo.net"
-    - "+.stun.playstation.net"
-    - "+.xboxlive.com"
   default-nameserver:
-    - tls://223.5.5.5:853
-    - tls://223.6.6.6:853
+    - tls://223.5.5.5
+    - tls://223.6.6.6
   nameserver:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-  fallback:
-    - https://1.1.1.1/dns-query
-    - https://dns.google/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
-  proxy-server-nameserver:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  respect-rules: true
 
 proxies: ~
 proxy-groups: ~
