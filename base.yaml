@@ -51,18 +51,6 @@ dns:
     - https://doh.pub/dns-query
     - https://dns.alidns.com/dns-query
 
-proxy-providers:
-
-proxies:
-
-proxy-groups:
-  - {name: 🚀 节点选择, type: select, proxies: [DIRECT]}
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🎮 游戏平台, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🎯 全球直连, type: select, proxies: [DIRECT, 🚀 节点选择]}
-  - {name: 🛑 广告拦截, type: select, proxies: [REJECT, DIRECT]}
-  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, DIRECT]}
 
 rules:
   # 私有IP
